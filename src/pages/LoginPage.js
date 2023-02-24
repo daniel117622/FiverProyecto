@@ -4,6 +4,8 @@ import {useNavigate} from "react-router-dom"
 
 function LoginPage()
 {
+    
+
     const [datos, setdatos] = useState({
         username: "",
         password: ""
@@ -31,8 +33,7 @@ function LoginPage()
                 }
             })
 
-        }).catch(e => {console.log(e)})
-
+        }).catch(e => {console.log(e)}
     }
 
     return (
