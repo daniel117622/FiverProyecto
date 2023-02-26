@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { Routes, Route } from "react-router-dom";
-import './App.css';
+import './index.css';
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
 
