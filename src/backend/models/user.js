@@ -1,4 +1,4 @@
-import {db} from '../MongoClient'
+const db = require('../MongoClient');
 
 class Usuario {
     constructor()
@@ -21,4 +21,14 @@ class Usuario {
             this.edad = doc.edad;
         }).catch( (err) => {console.log(err)} ); 
     }
+
+    static fetchAll()
+    {
+        // Returns a promise with the objects that where fetched
+        console.log("Fetching...")
+        var q = db.collection('usuario').find({}).toArray()
+        return q;
+    }
 }
+
+module.exports = Usuario;

@@ -3,14 +3,17 @@ import { Routes, Route } from "react-router-dom";
 import './index.css';
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
+import UserPageTest from './pages/test/UserPageTest'
+
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<MainPage/>}/>
-        <Route path='/login' element={<LoginPage/>}></Route>
-      </Routes>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/test/user' element={<UserPageTest/>}
+      </Routes> 
       
     </div>
   );
