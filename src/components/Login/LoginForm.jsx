@@ -1,4 +1,5 @@
 import React from "react";
+import { LoginStyle } from "./LoginStyle";
 
 function LoginForm()
 {
@@ -22,7 +23,7 @@ function LoginForm()
     }
 
     return(
-        <div>
+        <LoginStyle>
             <form method="GET">
                 <label>Usuario:</label>
                 <input type="text" name="username" onChange={handleChange}></input>
@@ -32,7 +33,7 @@ function LoginForm()
                 <br/>
                 <button onClick={handleSubmit}> Login </button>              
             </form>
-        </div>  
+        </LoginStyle>
     )
 }
 
