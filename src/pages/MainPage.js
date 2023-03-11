@@ -1,10 +1,33 @@
 import React from "react";
+import styled from "@emotion/styled";
 
-function MainPage()
-{
+import LoginPage from "../../../FiverProyecto/src/pages/LoginPage";
+import Carrousel from "../components/Carrousel/Carrousel";
+
+
+const TituloStyle = styled.div`
+
+    font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: te   xt;
+  -webkit-background-clip: text;
+  line-height: 0.9; 
+}`;
+
+
+
+
+
+
+function MainPage() {
     return (
         <div>
-            <h1>Pagina principal</h1>
+            <TituloStyle>
+                <h1>Artado</h1>
+            </TituloStyle>
+            <LoginPage/>
         </div>
     );
 }

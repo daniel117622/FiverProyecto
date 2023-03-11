@@ -12,11 +12,11 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/test/user' element={<UserPageTest/>}
+        <Route path='/test/user' element={<UserPageTest/>}/>
       </Routes> 
       
     </div>
   );
 }
-
+              
 export default App;

@@ -13,4 +13,4 @@ function UserPageTest()
     );
 }
 
-export default MainPage;
+export default UserPageTest;

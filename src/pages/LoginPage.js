@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Cookies, useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import LoginForm from "../components/Login/LoginForm";
 
 function LoginPage() {
   const [datos, setdatos] = useState({
@@ -22,10 +23,10 @@ function LoginPage() {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        username:formData.username.value,
-        password:formData.password.value,
+        username: formData.username.value,
+        password: formData.password.value,
       },
-      mode:"cors",
+      mode: "cors",
       method: "POST",
     })
       .then((r) => {
@@ -43,17 +44,7 @@ function LoginPage() {
   };
 
   return (
-    <div>
-      <form>
-        <label>Usuario:</label>
-        <input type="text" name="username" onChange={handleChange}></input>
-        <br />
-        <label>Password:</label>
-        <input type="text" name="password" onChange={handleChange}></input>
-        <br />
-        <button onClick={handleSubmit}> Login </button>
-      </form>
-    </div>
+    <LoginForm Change={handleChange} Submit={handleSubmit}/>
   );
 }
 
