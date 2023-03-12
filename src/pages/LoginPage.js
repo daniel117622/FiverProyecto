@@ -32,9 +32,9 @@ function LoginPage() {
       .then((r) => {
         r.json().then((jData) => {
           if (jData.msg == "Aceptado") {
-            console.log("Aceptado");
+            console.log("Aceptado.");
           } else {
-            console.log("Rechazado");
+            console.log("Rechazado.");
           }
         });
       })
