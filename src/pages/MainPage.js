@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import LoginPage from "../../../FiverProyecto/src/pages/LoginPage";
+//import LoginPage from "../../../FiverProyecto/src/pages/LoginPage";
 import Carrousel from "../components/Carrousel/Carrousel";
 
 
@@ -27,7 +27,6 @@ function MainPage() {
             <TituloStyle>
                 <h1>Artado</h1>
             </TituloStyle>
-            <LoginPage/>
         </div>
     );
 }
