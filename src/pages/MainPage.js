@@ -2,7 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 
 //import LoginPage from "../../../FiverProyecto/src/pages/LoginPage";
-import Carrousel from "../components/Carrousel/Carrousel";
+//import Carrousel from "../components/Carrousel/Carrousel";
+import PostCard from "../components/MainSection/HomeCard/PostCard";
 
 
 const TituloStyle = styled.div`
@@ -24,9 +25,8 @@ const TituloStyle = styled.div`
 function MainPage() {
     return (
         <div>
-            <TituloStyle>
-                <h1>Artado</h1>
-            </TituloStyle>
+            <TituloStyle/>
+            <PostCard/>
         </div>
     );
 }
