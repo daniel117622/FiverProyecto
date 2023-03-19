@@ -52,8 +52,4 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
   
   let usr = new Usuario();
-  usr._id = 3;
-  usr.name = "Testing2";
-  usr.save()
-  // Usuario.fetchAll().then((doc) => {console.log(doc)})
 });
