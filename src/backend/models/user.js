@@ -3,13 +3,25 @@ const db = require('../MongoClient');
 class Usuario {
     constructor()
     {
+        db.collection('usuario').aggregate([{ $group: { _id: null, maxId: { $max: "$_id" } } }]).toArray().then( r => 
+            { 
+                let newId = parseInt(r[0].maxId.slice(1));
+                newId += 1;
+                const zeroPad = (num, places) => String(num).padStart(places, '0');
+                console.log( 'U'  + zeroPad(newId, 3 ));
+                this._id = newId;
+            })
         this._id = null;
         this.nombre = null;
-        this.edad = null;
-        this.id_proyectos = [];
-        this.id_eventos = [];
+        this.apellido = null;
+        this.correo = null;
+        this.pass = null;
+        this.profile_image = null;
+        this.background_image = null;
         this.descripcion = null;
-        this.credenciales = [{nombre : null , nivel: null}];
+        this.publicaciones = [];
+        this.preferencias = [];
+        this.proyectos = [];
     }
 
     load(user_id)
@@ -18,8 +30,46 @@ class Usuario {
         db.collection('usuario').findOne(filter).then((doc) => {
             this._id = doc.id;
             this.nombre = doc.nombre;
-            this.edad = doc.edad;
+            this.apellido = doc.apellido;
+            this.correo = doc.apellido;
+            this.pass = doc.pass;
+            this.profile_image = null;
+            this.background_image = null;
+            this.descripcion = null; 
+            this.publicaciones = doc.publicaciones;
+            this.preferencias = doc.preferencias;
+            this.proyectos = doc.proyectos;
         }).catch( (err) => {console.log(err)} ); 
+    }
+
+    
+
+    add_pub( pub )
+    {
+        if ( pub.hasOwnProperty('id_publicacion'))
+        {
+            this.publicaciones.push(pub);
+        }
+    }
+
+    add_info( profile_image , background_image, descripcion )
+    {
+        this.profile_image = profile_image;
+        this.background_image = background_image;
+        this.descripcion = descripcion;
+    }
+
+    add_preferene( pref )
+    {
+        this.preferencias.push(pref);
+    }
+
+    add_project(proj)
+    {
+        if ( proj.hasOwnProperty('id_publicacion') && proj.hasOwnProperty('estatus'))
+        {
+            this.publicaciones.push(proj);
+        }   
     }
 
     save() // Performs validation and stores this user into database
@@ -43,7 +93,7 @@ class Usuario {
         }).catch((err) => {console.log(err)})
     }
     
-        
+            
 
     static fetchAll()
     {
