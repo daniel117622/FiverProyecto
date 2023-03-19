@@ -10,8 +10,8 @@ class Usuario {
                 const zeroPad = (num, places) => String(num).padStart(places, '0');
                 console.log( 'U'  + zeroPad(newId, 3 ));
                 this._id = newId;
+                this._READY = true;
             })
-        this._id = null;
         this.nombre = null;
         this.apellido = null;
         this.correo = null;
@@ -22,13 +22,14 @@ class Usuario {
         this.publicaciones = [];
         this.preferencias = [];
         this.proyectos = [];
+        this._READY = false;
     }
 
     load(user_id)
     {
         filter = {_id : user_id};
         db.collection('usuario').findOne(filter).then((doc) => {
-            this._id = doc.id;
+            this._id = doc._id;
             this.nombre = doc.nombre;
             this.apellido = doc.apellido;
             this.correo = doc.apellido;
@@ -76,6 +77,7 @@ class Usuario {
     {
         // If user ID exists it overwrites that user. Else it is added to the database
         // Checking if that user already exists
+        if (this._READY == false) {  console.log("Not ready") ; return;  }
         db.collection('usuario').countDocuments({_id:this._id}).then((cnt) => {
             if (cnt == 0 && this._id != null) 
             {
