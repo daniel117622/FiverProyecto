@@ -1,11 +1,16 @@
 import React from "react";
+import Filter  from "../FilterBar/Filter/Filter";
 import { UserCardStyle } from "./UserCardStyle";
 
 const UserCard = () => {
   return (
     <UserCardStyle>
-      <img src="" alt="" className="userPic" />
-      <div className="userFilter"></div>
+      <img src="https://picsum.photos/200/300" alt="" className="userPic" />
+      <div className="userFilter">
+        <Filter/>
+        <Filter/>
+        <Filter/>
+      </div>
       <div className="userName">
         <h3>Nombre usuario</h3>
       </div>

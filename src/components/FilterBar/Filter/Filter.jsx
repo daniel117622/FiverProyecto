@@ -1,7 +1,7 @@
 import React from 'react';
 import { FilterStyle } from './FilterStyle';
 
-const Filters = () => {
+const Filter = () => {
   return (
     <FilterStyle>
       <p>Filter #</p>
@@ -9,4 +9,4 @@ const Filters = () => {
   );
 };
 
-export default Filters;
+export default Filter;

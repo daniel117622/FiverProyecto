@@ -52,7 +52,10 @@ const ProjectCard2 = () => {
           <h3>Postulado a:</h3>
           <ul>
             <li>
-              <input type="checkbox" name="" id="" className="rChoice" />
+              <label class="checkContainer">
+                <input type="checkbox" name="" id="" />
+                <span className="checkS"></span>
+              </label>
               <p className="roleName">Rol</p>
               <div className="rStatus">
                 <p>##</p>
