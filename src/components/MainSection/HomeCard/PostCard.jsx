@@ -9,18 +9,25 @@ const PostCard = () => {
         <div className="sectionOne">
           <h1>Titulo proyecto</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Lorem ipsum dolor sit amet consectetur. Nec gravida fermentum
+            faucibus arcu elit adipiscing nunc potenti. Posuere lacus tortor
+            ultricies purus risus sit.
           </p>
-          <a href="">Ver mas</a>
         </div>
         <div className="sectionTwo">
           <h3>Se busca</h3>
-          <p>Opcion</p>
-
-          <input type="checkbox" name="" id="" />
+          <ul>
+            <li>
+              <label class="checkContainer">
+                <input type="checkbox" name="" id="" />
+                <span className="checkS"></span>
+              </label>
+              <p>Puesto 1</p>
+            </li>
+          </ul>
+        </div>
+        <div className="buttons">
+          <a href="">Ver mas</a>
           <button>Postular</button>
         </div>
       </div>
