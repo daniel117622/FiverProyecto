@@ -5,7 +5,7 @@ import { ProjectCard1, ProjectCard2 } from "./ProjectCard/ProjectCard";
 const ProjectBar = () => {
   return (
     <ProjectBarStyle>
-      <img src="" alt="" className="userPic" />
+      <img src="https://picsum.photos/200/300" alt="" className="userPic" />
       <div className="barContent">
         <h2>Mis Proyectos</h2>
         <div className="projectSection1">

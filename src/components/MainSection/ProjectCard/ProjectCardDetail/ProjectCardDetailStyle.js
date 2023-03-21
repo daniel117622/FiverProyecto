@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const ProjectCardDetailStyle = styled.div`
   .pOwner {
+    margin-left: 10px;
     width: 30%;
     display: inline-block;
     vertical-align: top;

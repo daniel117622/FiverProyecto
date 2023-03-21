@@ -1,10 +1,10 @@
 import React from "react";
-import { ProjectCardStyle } from "./ProjectBarStyle";
+import { ProjectCardStyle } from "./ProjectCardStyle";
 
 const ProjectCard1 = () => {
   return (
     <ProjectCardStyle>
-      <img src="" alt="" />
+      <img src="https://picsum.photos/200/300" alt="" />
       <div className="projectText">
         <h3>Titulo proyecto</h3>
         <div className="projectDetail">
@@ -25,7 +25,7 @@ const ProjectCard1 = () => {
 const ProjectCard2 = () => {
   return (
     <ProjectCardStyle>
-      <img src="" alt="" />
+      <img src="https://picsum.photos/200/300" alt="" />
       <div className="projectText">
         <h3>Titulo proyecto</h3>
         <h4 className="pState">Estatus</h4>

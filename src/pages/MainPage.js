@@ -3,7 +3,8 @@ import styled from "@emotion/styled";
 
 //import LoginPage from "../../../FiverProyecto/src/pages/LoginPage";
 //import Carrousel from "../components/Carrousel/Carrousel";
-import MainContent from "../components/MainSection/MainContent";
+//import MainContent from "../components/MainSection/MainContent";
+import ProjectBar from "../components/ProjectBar/ProjectBar";
 
 
 const TituloStyle = styled.div`
@@ -26,7 +27,7 @@ function MainPage() {
     return (
         <div>
             <TituloStyle/>
-            <MainContent/>
+            <ProjectBar/>
         </div>
     );
 }
